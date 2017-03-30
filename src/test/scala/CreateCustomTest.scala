@@ -24,7 +24,6 @@ class CreateCustomTest extends FlatSpec with TestSetUp {
     }
   }
 
-
   "user" should "fail to login with invalid credentials" in {
 
     driver.manage().window().maximize()
@@ -59,49 +58,60 @@ class CreateCustomTest extends FlatSpec with TestSetUp {
     driver.findElementByCssSelector("input.login-user-input-password.login-user-input").sendKeys(password)
 
     driver.findElementByCssSelector("button.login-login-button").click()
+    Thread.sleep(1000)
   }
 
 
-  "user" should "search for watches category" in {
+  "user" should "search for bags category" in {
 
     webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.desktop-searchBar")))
 
     val search: WebElement =driver.findElementByCssSelector("input.desktop-searchBar")
-    search.sendKeys("watches")
+    search.sendKeys("bags")
     driver.findElementByCssSelector("a.desktop-submit").click()
   }
 
-  "user" should "select a watch" in {
+ "user" should "select a bag" in {
 
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.product-base a:nth-child(2)")))
-    driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul.results-base > li.product-base")))
+    driver.findElementByCssSelector("ul.results-base > li.product-base").click()
   }
 
-  "user" should "be able to add the watch to the cart" in {
+  "user" should "be able to add the bag to the cart" in {
 
     driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
 
   }
 
-  "user" should "be able to verify the products added to cart" in {
+   "user" should "be able to verify the products added to cart" in {
 
     driver.findElementByCssSelector("a.desktop-cart").click()
   }
 
-  "user" should "be able to checkout" in {
+  "user" should "Add a mailing address" in {
 
     driver.findElementByCssSelector("div.order-total.footer div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable ").click()
-    driver.findElementByCssSelector("input.pincode").sendKeys("110096")
-    driver.findElementByCssSelector("input.locality").click()
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.suggestions div.bd button")))
-    driver.findElementByCssSelector("div.suggestions div.bd button").click()
-    driver.findElementByCssSelector("input.name").sendKeys("Charmy Garg")
-    driver.findElementByCssSelector("textarea.address").sendKeys("Sector 36, Noida")
-    driver.findElementByCssSelector("input.mobile").sendKeys("9867574838")
-    driver.findElementByCssSelector("button.green-button.submit.clickable").click()
+    driver.findElementById("pincode").sendKeys("201301")
+    driver.findElementById("locality").click()
+    Thread.sleep(3000)
+    driver.findElementById("locality").click()
+    driver.findElementByCssSelector(".bd button:nth-child(2)").click()
+    driver.findElementById("name").sendKeys("Shubhra Sharma")
+    driver.findElementById("address").sendKeys("Noida")
+    driver.findElementById("mobile").sendKeys("9753257891")
+    driver.findElementByCssSelector(".white-row.buttons .green-button.submit.clickable").click()
+    Thread.sleep(3000)
 
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.btn.primary-btn.btn-continue.green-button.clickable")))
-    driver.findElementByCssSelector("button.btn.primary-btn.btn-continue.green-button.clickable").click()
   }
+
+  "user" should "place order at mailing address" in {
+
+    driver.findElementByCssSelector("button.btn.primary-btn.btn-continue.green-button.clickable").click()
+    Thread.sleep(3000)
+    driver.close()
+
+
+  }
+
 
 }

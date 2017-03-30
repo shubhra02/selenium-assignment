@@ -5026,7 +5026,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.1!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.14.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2845ms :: artifacts dl 78ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2486ms :: artifacts dl 82ms[0m
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 compile produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 runtime produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 test produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-test.xml[0m
@@ -5040,7 +5040,7 @@
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 docs produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 pom produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#selenium-demo_2.12;1.0 scala-tool produced in /home/knoldus/selenium-demo/target/resolution-cache/reports/default-selenium-demo_2.12-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2845ms resolve - 78ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (2486ms resolve - 82ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mThere may be incompatibilities among your library dependencies.[0m
 [0m[[33mwarn[0m] [0mHere are some of the libraries that were evicted:[0m
